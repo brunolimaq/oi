@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tradutor
+  labels:
+    app: tradutor
+spec:
+  replicas: 1
+    spec:
+      containers:
+      - name: tradutor
+        image: brunolimaq/tradutor:latest
+        ports:
+        - containerPort: 5000
